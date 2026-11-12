@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 六批 94 项精选零重复 Skills 全量秒搜与口令控制台（20pt 大字版）</title>
+<style>
+  :root { --bg:#fafaf9; --card:#ffffff; --ink:#1c1917; --muted:#57534e; --accent:#0f766e; --accent-bg:#f0fdfa; --border:#d6d3d1; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Microsoft YaHei","PingFang SC",sans-serif; font-size:20px; line-height:1.65; }
+  header { position:sticky; top:0; z-index:20; background:#ffffff; border-bottom:2px solid var(--border); padding:14px 24px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; }
+  h1 { margin:0; font-size:24px; font-weight:800; }
+  .search-wrap { flex:1; min-width:280px; max-width:620px; }
+  input[type="search"] { width:100%; font-size:20px; padding:10px 16px; border:2px solid #a8a29e; border-radius:8px; outline:none; }
+  input[type="search"]:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(15,118,110,0.15); }
+  details.filter-drawer { max-width:1340px; margin:14px auto 0; padding:0 24px; }
+  details summary { cursor:pointer; font-weight:700; color:var(--accent); user-select:none; }
+  .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+  .chip { font-size:18px; padding:6px 14px; border:1.5px solid var(--border); border-radius:999px; background:#fff; cursor:pointer; }
+  .chip.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+  main { max-width:1340px; margin:18px auto 56px; padding:0 24px; display:grid; grid-template-columns:repeat(auto-fill, minmax(560px, 1fr)); gap:18px; }
+  .card { background:var(--card); border:1.5px solid var(--border); border-radius:12px; padding:20px 22px; display:flex; flex-direction:column; gap:10px; cursor:pointer; transition:border-color 0.15s ease, transform 0.15s ease; }
+  .card:hover { border-color:var(--accent); transform:translateY(-2px); }
+  .card-top { display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .sid { font-family:Consolas,monospace; font-size:22px; font-weight:800; color:var(--accent); }
+  .domain-badge { font-size:17px; font-weight:700; background:var(--accent-bg); color:var(--accent); padding:3px 12px; border-radius:6px; white-space:nowrap; }
+  .desc { margin:0; color:var(--ink); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .meta { margin-top:auto; padding-top:10px; border-top:1px dashed var(--border); font-size:18px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+  dialog { max-width:760px; width:92vw; border:2px solid var(--accent); border-radius:14px; padding:26px 30px; font-size:20px; line-height:1.7; box-shadow:0 20px 50px rgba(0,0,0,0.22); }
+  dialog::backdrop { background:rgba(28,25,23,0.45); }
+  .modal-head { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+  .modal-title { font-family:Consolas,monospace; font-size:25px; font-weight:800; color:var(--accent); margin:0; }
+  .btn { font-size:19px; font-weight:700; padding:8px 18px; border-radius:8px; border:1.5px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+  .btn-ghost { background:#fff; color:var(--ink); border-color:var(--border); }
+  .cmd-box { background:#f5f5f4; border:1px solid var(--border); border-radius:8px; padding:12px 16px; font-family:Consolas,"Microsoft YaHei",monospace; font-size:19px; margin:14px 0; word-break:break-all; }
+</style>
+</head>
+<body>
+
+<div style="background:#0f172a;color:#f8fafc;padding:10px 22px;border-bottom:1px solid #334155;font-size:18px;">
+  <div style="max-width:1780px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;">
+    <div style="font-weight:800;color:#38bdf8;">🧭 金泰 AI 777 项 Skills 全景总典（20pt 大字检索台）</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <a href="https://aiuserai-ctrl.github.io/jintai-all-skills-atlas/" style="color:#fff;background:#b45309;text-decoration:none;padding:5px 13px;border-radius:8px;font-weight:700;">📚 全库 777 项优缺点总典</a>
+      <a href="https://aiuserai-ctrl.github.io/jintai-all-skills-atlas/curated-94.html" style="color:#fff;background:#0f766e;text-decoration:none;padding:5px 13px;border-radius:8px;font-weight:700;">⭐ GitHub六批94项精选口令台</a>
+      <a href="https://aiuserai-ctrl.github.io/jintai-all-skills-atlas/routers-100.html" style="color:#fff;background:#7c3aed;text-decoration:none;padding:5px 13px;border-radius:8px;font-weight:700;">⚡ 六大总控100路路由模拟台</a>
+      <a href="https://aiuserai-ctrl.github.io/jintai-skills-handbook/" style="color:#fff;background:#be123c;text-decoration:none;padding:5px 13px;border-radius:8px;font-weight:700;">🆕 近一月新装 318 项详表</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <h1>GitHub 六批 94 项精选 Skills 秒搜台（全库 777 项 · 6大路由 100/100 满分全绿）</h1>
+  <div class="search-wrap">
+    <input id="q" type="search" placeholder="秒搜：小津、契诃夫、戏曲、古文笺、铸卡片、PBR包浆、转场、运镜、OKLCH、打击感…" autofocus>
+  </div>
+</header>
+
+<details class="filter-drawer">
+  <summary>细分筛选 ▾</summary>
+  <div class="chips" id="chips">
+    <button class="chip active" data-dom="ALL">全部精选 (94)</button>
+    <button class="chip" data-dom="电影剧作·戏曲·运镜">电影剧作·戏曲·运镜 (17)</button>
+    <button class="chip" data-dom="东方长图·古文笺·强风格化">东方长图·古文笺·强风格化 (11)</button>
+    <button class="chip" data-dom="3D材质·程序化·交互加载">3D材质·程序化·交互加载 (12)</button>
+    <button class="chip" data-dom="无缝转场·爽感动效·光学滤镜">无缝转场·爽感动效·光学滤镜 (12)</button>
+    <button class="chip" data-dom="美学地基·设计心理学·微交互">美学地基·设计心理学·微交互 (11)</button>
+    <button class="chip" data-dom="活体视觉图解·空间白板·插画">活体视觉图解·空间白板·插画 (13)</button>
+    <button class="chip" data-dom="网页·逻辑·提示词·策划·算力">网页·逻辑·提示词·策划·算力 (18)</button>
+  </div>
+</details>
+
+<main id="grid"></main>
+
+<dialog id="dlg">
+  <div class="modal-head">
+    <h2 class="modal-title" id="m-sid"></h2>
+    <button class="btn btn-ghost" id="m-close">关闭</button>
+  </div>
+  <div id="m-badge" style="margin-bottom:10px;color:#0f766e;font-weight:700;"></div>
+  <p id="m-desc" style="margin:0 0 12px;"></p>
+  <div style="font-size:18.5px;color:#57534e;" id="m-meta"></div>
+  <div class="cmd-box" id="m-cmd"></div>
+  <button class="btn" id="m-copy">一键复制调用指令</button>
+</dialog>
+
+<script>
+const ITEMS = [
+  // 第六批（17项 + 3组全本剧目超集融合）最新排前
+  {sid:"sw-series-engine-bible", wave:"W6", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 含名剧全本库", desc:"剧集引擎与提案圣经（Series Engine & Bible）：百集耐力测试、人物冲突网、试播集跳板，已并入《白宫风云》《黑道家族》《伦敦生活》《绝命毒师》《花束般的恋爱》剧本案例库。"},
+  {sid:"sw-series-structure", wave:"W6", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 单集整季结构", desc:"剧集单集与整季结构工程：Cold Open 冷开场、四/五/六幕页码锚点、流媒体隐形幕三测、A/B/C多线交织配比及整季帐篷集/瓶子集排布。"},
+  {sid:"sw-genre-anatomy", wave:"W6", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 12大类型解剖", desc:"约翰·特鲁比《类型的解剖》12大类型节拍系统与混搭矩阵：动作/科幻/犯罪/侦探惊悚/神话/奇幻/恐怖/喜剧/西部/黑帮/成长/爱情的必中节拍与3~4类型混搭表。"},
+  {sid:"sw-character-conflict", wave:"W6", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 三维人物冲突", desc:"戏剧人物塑造、强对手设计与冲突升级：埃格里生理/社会/心理三维人物、麦基高压显露真性格、陆军「人物要活八要、对手要强、给对手一把刀」。"},
+  {sid:"sw-writers-room", wave:"W6", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 美剧编剧室", desc:"美剧编剧室（Writers' Room）集体破题与制片实战：白板破故事（Breaking the Story）、分场Beat Sheet、审片改稿纪律与预算场地倒逼删景合场改戏。"},
+  {sid:"teardown", wave:"W6", dom:"活体视觉图解·空间白板·插画", repo:"jakubkrehel/skills", stat:"★ 11.9K · 30文件 · 5测试全绿", desc:"精密器物与界面层级等轴测爆炸拆解图生成器（Teardown）：为相机镜头、物理硬件、像素或UI层级构建爆炸图、剖面图、引线标注、Flipbook翻转页与矢量SVG。"},
+  {sid:"explain-interface", wave:"W6", dom:"美学地基·设计心理学·微交互", repo:"jakubkrehel/skills", stat:"★ 11.9K · 界面逆向拆解", desc:"网页视觉特效与动效逆向拆解器（Explain Interface）：从在线URL或截图逐层剥离还原其多层渐变、光学阴影、着色器或动画曲线是如何构建出来的。"},
+  {sid:"better-ui", wave:"W6", dom:"美学地基·设计心理学·微交互", repo:"jakubkrehel/skills", stat:"★ 11.9K · 精确数值抛光", desc:"界面表面、同心圆角、图标状态过渡与光学对齐精确数值抛光字典（Better UI）：R=r+d 同心圆角、1px 光学偏移、0.96 按压缩放与多层物理阴影精确参数。"},
+  {sid:"ljg-rank", wave:"W6", dom:"活体视觉图解·空间白板·插画", repo:"lijigang/ljg-skills", stat:"MIT · Deutsch降秩引擎", desc:"李继刚「降秩引擎（Rank Reduction）」：基于《无穷的开始》好解释标准，将复杂领域的十几个表象砍到不可再少的正交独立生成元，并逆向推导还原全部现象。"},
+  {sid:"ljg-constraint", wave:"W6", dom:"活体视觉图解·空间白板·插画", repo:"lijigang/ljg-skills", stat:"MIT · 解空间测绘", desc:"李继刚「约束引擎」：找出真正框住一个领域、产品或角色的硬约束（物理世界）、软约束（制度规则）与自设约束（旧解释），测绘真实解空间与破局点。"},
+  {sid:"threejs-react-three-fiber", wave:"W6", dom:"3D材质·程序化·交互加载", repo:"cloudai-x/threejs-skills", stat:"r186 · 13件套终极满贯", desc:"React Three Fiber (R3F 9.8 + drei 10.7 + Three.js r186) 声明式3D场景工程：JSX场景图、useFrame零重渲染循环、指针射线交互与WebGPU/TSL集成。"},
+  {sid:"spline-interactive", wave:"W6", dom:"3D材质·程序化·交互加载", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · Spline交互3D", desc:"Spline 浏览器交互式3D场景与React集成：接入 .splinecode 资产、按需懒加载、状态事件触发、运行时变量操控与3D相机切换。"},
+  {sid:"react-spring-physics", wave:"W6", dom:"无缝转场·爽感动效·光学滤镜", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · 胡克定律真弹簧", desc:"React Spring + Popmotion 胡克定律真实弹簧物理动效：基于刚度（stiffness）、阻尼（damping）、质量（mass）与初速度构建可打断60fps物理过渡。"},
+  {sid:"physics-tuning", wave:"W6", dom:"3D材质·程序化·交互加载", repo:"awesome-gamedev-agent-skills", stat:"★ 8,044 · 刚体防穿模", desc:"刚体物理手感与防穿模调优（Physics Tuning）：固定步长FixedUpdate渲染插值消除抖动、非对称重力曲线、连续碰撞检测（CCD）阻断高速穿模。"},
+  {sid:"audio-design", wave:"W6", dom:"电影剧作·戏曲·运镜", repo:"awesome-gamedev-agent-skills", stat:"★ 8,044 · 混音与动态配乐", desc:"交互视听与影视游戏声音设计架构：Bus总线混音与分贝增益、Sidechain Ducking对白闪避、Foley拟音随机音高防疲劳、分层/重排自适应动态配乐。"},
+  {sid:"obviously-awesome", wave:"W6", dom:"网页·逻辑·提示词·策划·算力", repo:"wondelai/skills", stat:"★ 2,655 · 5+1产品定位", desc:"April Dunford《Obviously Awesome》5+1产品定位引擎：按「竞争替代品→独特属性→价值与实证→最佳契合客群→市场品类选择/创造」输出高转化定位画布。"},
+  {sid:"ddia-systems", wave:"W6", dom:"网页·逻辑·提示词·策划·算力", repo:"wondelai/skills", stat:"★ 2,655 · DDIA分布式底座", desc:"Martin Kleppmann《数据密集型应用系统设计（DDIA）》分布式架构底座：LSM-Tree/B-Tree存储引擎、主从/无主复制、分区策略、事务隔离与流批管线。"},
+  // 第五批（17项）最新排前
+  {sid:"sw-chinese-series-practice", wave:"W5", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · MIT", desc:"国产剧创作体系与制片工业链：姚扣根学院体系+一页纸/大纲/分集梗概/人物小传制片文档链+IP改编与广电备案审查实务。"},
+  {sid:"sw-chinese-opera-banqiang", wave:"W5", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 曲牌板腔双璧", desc:"中国传统戏曲板腔体（京剧/豫剧/越剧/秦腔/评剧/川剧）编剧法：导板/原板/快板/散板/摇板变速、十三辙押韵与生旦净丑行当唱词。"},
+  {sid:"succession-series-writing", wave:"W5", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 39集剧本拆解", desc:"《继承之战》Succession 群像商战与权力博弈剧集写法：十人同场大场面（Set Piece）多线调度、体面羞辱对白与封闭权力牢笼。"},
+  {sid:"sw-dialogue", wave:"W5", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 台词医院", desc:"罗伯特·麦基《对白》台词精修医院：对白即行动，按欲望-意图-策略重写台词，专门根治人物同声病与说明书台词。"},
+  {sid:"sw-truby-anatomy", wave:"W5", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · 剧本医生", desc:"约翰·特鲁比《故事的解剖》22 步有机故事结构与剧本医生会诊：弱点/需求 vs 欲望、幽灵与伤痕、四角对立网络与中盘塌陷诊断。"},
+  {sid:"ljg-present", wave:"W5", dom:"东方长图·古文笺·强风格化", repo:"lijigang/ljg-skills", stat:"v4.8.0 · 已修Win换行", desc:"李继刚「演讲铸造器」：Unix 气质深色保真排版，内嵌 IBM Plex Mono 双字重直出单文件零依赖离线 HTML 演讲 Deck（8/8 校验全绿）。"},
+  {sid:"ljg-business-model", wave:"W5", dom:"活体视觉图解·空间白板·插画", repo:"lijigang/ljg-skills", stat:"v1.0.0 · 7/7测试全绿", desc:"李继刚「商业模式画布铸造器」：《商业模式新生代》中文横版九模块商业模式画布，一键直出出版级 HTML 与超清 PNG。"},
+  {sid:"ljg-map", wave:"W5", dom:"活体视觉图解·空间白板·插画", repo:"lijigang/ljg-skills", stat:"v1.0.1 · 思考地图", desc:"李继刚「形式化思考地图」：基于《学习观》拆解核心概念、白话定义、短公式、判别依据与有条件联结知识图谱。"},
+  {sid:"ljg-structure", wave:"W5", dom:"活体视觉图解·空间白板·插画", repo:"lijigang/ljg-skills", stat:"MIT · 结构风洞", desc:"李继刚「母题结构风洞」：穿透表象提炼底层母题（Motif）结构，展开正负反馈因果回路并送入极端边界风洞压力检验。"},
+  {sid:"threejs-asset-pipeline", wave:"W5", dom:"3D材质·程序化·交互加载", repo:"cloudai-x/threejs-skills", stat:"r186 · 资产瘦身", desc:"Three.js 3D 资产瘦身与纹理压缩管线：gltf-transform 批量压缩 glTF/GLB、Meshopt/Draco、KTX2 显存纹理与动画重采样。"},
+  {sid:"threejs-performance", wave:"W5", dom:"3D材质·程序化·交互加载", repo:"cloudai-x/threejs-skills", stat:"r186 · 12件套满贯", desc:"Three.js / WebGPU 性能诊断与调优：renderer.info 瓶颈定位、InstancedMesh/BatchedMesh 合批、BVH 射线加速与显存回收。"},
+  {sid:"rive-interactive", wave:"W5", dom:"无缝转场·爽感动效·光学滤镜", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · 状态机动画", desc:"Rive 状态机交互矢量动画：State Machine 状态切换、鼠标视线跟随、骨骼混合树与 React/Canvas ViewModel 双向绑定。"},
+  {sid:"web3d-integration-patterns", wave:"W5", dom:"3D材质·程序化·交互加载", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · 滚动驱动3D", desc:"Three.js / React Three Fiber + GSAP ScrollTrigger 滚动驱动 3D 摄像机路径、着色器参数与 DOM 叠加层同步叙事总谱。"},
+  {sid:"gestures", wave:"W5", dom:"无缝转场·爽感动效·光学滤镜", repo:"emilkowalski/skill", stat:"MIT · 跟手物理", desc:"Emil Kowalski 1:1 跟手物理手势工程：Pointer Capture 拖拽、下滑关闭抽屉、橡皮筋对数阻尼 rubberbanding 与投掷速度投影。"},
+  {sid:"good-strategy-bad-strategy", wave:"W5", dom:"网页·逻辑·提示词·策划·算力", repo:"wondelai/skills", stat:"★ 2,655 · 战略内核", desc:"Richard Rumelt《好战略，坏战略》战略内核三要素：剔除空话清单，聚焦「瓶颈诊断 + 不对称指导方针 + 连贯行动」。"},
+  {sid:"blue-ocean-strategy", wave:"W5", dom:"网页·逻辑·提示词·策划·算力", repo:"wondelai/skills", stat:"★ 2,655 · ERRC网格", desc:"《蓝海战略》ERRC 剔除-减少-提升-创造四步动作网格、买方效用地图、非顾客三层次挖掘与价值曲线重构。"},
+  {sid:"constraint-driven-development", wave:"W5", dom:"网页·逻辑·提示词·策划·算力", repo:"addyosmani/agent-skills", stat:"★ 114.6K · 质量门禁", desc:"Addy Osmani 约束驱动开发与 quality-gate.mjs 工程质量底线硬契约：函数复杂度、行数上限、测试与安全自动化门禁。"},
+  // 第四批（17项）优先排前便于即查即用
+  {sid:"ozu-screenplay-style", wave:"W4", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · MIT", desc:"小津安二郎×野田高梧静观电影剧作美学：大事件移出画外、画内写家常涟漪、最小音节承认、中转传话、枕镜头空镜断章与递减留白结尾。"},
+  {sid:"chekhov-dramaturgy", wave:"W4", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · MIT", desc:"契诃夫潜台词暗流与生活流群像戏剧法：无反派环境冲突、错半拍对白（Half-Step-Off）、最深痛处最短词、哲思被日常口渴打断与三层复调结尾。"},
+  {sid:"sw-chinese-opera-qupai", wave:"W4", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · MIT", desc:"中国传统戏曲曲牌体（元杂剧/明清传奇/昆曲）声腔韵律美学：十七宫调情绪映射、四折一楔子、南北合套、填词衬字务头与宾白转唱点。"},
+  {sid:"camera-systems", wave:"W4", dom:"电影剧作·戏曲·运镜", repo:"awesome-gamedev-agent-skills", stat:"★ 8,044 · Apache-2.0", desc:"电影感交互摄像机运镜算法：死区缓冲（Deadzone）、速度前瞻构图（Look-Ahead）、弹簧阻尼平滑跟随、轨道碰撞防穿模与震动衰减。"},
+  {sid:"ljg-card", wave:"W4", dom:"东方长图·古文笺·强风格化", repo:"lijigang/ljg-skills", stat:"MIT · v7.4.2", desc:"李继刚「铸（Content Caster）」出版级长图卡片引擎：静线叙事(-l)、京华老宋40px大字纯白底原文精排(-f)、漫画(-c)、论证白板(-w)四套模具。"},
+  {sid:"ljg-classic", wave:"W4", dom:"东方长图·古文笺·强风格化", repo:"lijigang/ljg-skills", stat:"MIT · 已修Win盘符", desc:"李继刚「古文笺」典籍美学长图生成器：原文100%覆盖之青色字词注、朱色句义注、赭色异文考据、无字意旨配图与暖纸深墨全章解读PNG。"},
+  {sid:"json-canvas", wave:"W4", dom:"活体视觉图解·空间白板·插画", repo:"kepano/obsidian-skills (官方)", stat:"76.8K安装 · MIT", desc:"Obsidian 创始人官方 JSON Canvas 1.0 空间视觉白板：生成独立 .canvas 节点、连线、分组框与色标拓扑画布（零触碰 .obsidian 配置）。"},
+  {sid:"substance-3d-texturing", wave:"W4", dom:"3D材质·程序化·交互加载", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · MIT", desc:"Substance 3D Painter PBR 写实材质创作、金属边缘磨损风化包浆、ORM 通道压缩打包、Python 批处理导出与 Three.js/glTF 贴图优化。"},
+  {sid:"procedural-gen", wave:"W4", dom:"3D材质·程序化·交互加载", repo:"awesome-gamedev-agent-skills", stat:"★ 8,044 · Apache-2.0", desc:"程序化生成艺术数学地基：确定性随机种子 RNG、Perlin/Simplex 分形噪声高度图、波函数坍缩（WFC）局部约束拼贴与 BSP 空间分割。"},
+  {sid:"threejs-interaction", wave:"W4", dom:"3D材质·程序化·交互加载", repo:"cloudai-x/threejs-skills", stat:"17.9K安装 · r186", desc:"Three.js (WebGL/WebGPU) 3D 射线拾取与交互：Raycaster 拾取、相机轨道阻尼控制、变换轴 Gizmo、物体拖拽、悬停高亮与框选。"},
+  {sid:"threejs-loaders", wave:"W4", dom:"3D材质·程序化·交互加载", repo:"cloudai-x/threejs-skills", stat:"16.4K安装 · 10件套满贯", desc:"Three.js 高性能 3D 资产流式加载管线：glTF/GLB + Draco 几何解压 + Meshopt + KTX2 GPU 纹理解压 + HDR/EXR 环境贴图。"},
+  {sid:"lightweight-3d-effects", wave:"W4", dom:"3D材质·程序化·交互加载", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · 轻量3D", desc:"零重框架轻量级伪 3D 与视差三剑客：28KB Zdog 圆润伪 3D 矢量插画、Vanta.js 动态三维背景与 Vanilla-Tilt 卡片鼠标视差倾斜。"},
+  {sid:"pixijs-blend-modes", wave:"W4", dom:"无缝转场·爽感动效·光学滤镜", repo:"pixijs/pixijs-skills (官方)", stat:"MIT · 光学叠色", desc:"PixiJS v8 2D GPU 光学图层混合模式艺术：正片叠底(multiply)、滤色(screen)、叠加(overlay)、颜色减淡与差值等暗房叠印光效。"},
+  {sid:"react-view-transitions", wave:"W4", dom:"无缝转场·爽感动效·光学滤镜", repo:"vercel-labs/agent-skills (官方)", stat:"185.2K安装 · 官方", desc:"Vercel 官方原生 View Transitions API 电影级共享元素平滑变形转场：跨路由缩略图无缝展开为主图、列表重排 Morphing 与防闪烁配方。"},
+  {sid:"barba-js", wave:"W4", dom:"无缝转场·爽感动效·光学滤镜", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · MIT", desc:"Awwwards 获奖站标配 Barba.js 多页面无缝帷幕过场转场：结合 GSAP 时间轴实现跨页遮罩擦除、视差叠化、预取缓存与零白屏切换。"},
+  {sid:"design-everyday-things", wave:"W4", dom:"美学地基·设计心理学·微交互", repo:"wondelai/skills", stat:"★ 2,655 · MIT", desc:"唐·诺曼《设计心理学》工业与交互美学地基：示能（Affordances）、意符（Signifiers）、自然空间映射、防呆约束与跨越执行/评估双鸿沟。"},
+  {sid:"microinteractions", wave:"W4", dom:"美学地基·设计心理学·微交互", repo:"wondelai/skills", stat:"★ 2,655 · MIT", desc:"Dan Saffer《微交互》四步感官细节美学：围绕「触发器 → 规则 → 视觉/动效/声音反馈 → 循环与模式」打磨标志性品牌触感瞬间。"},
+
+  // 第一～三批（43项）完整汇总
+  {sid:"sw-story-structure", wave:"W1", dom:"电影剧作·戏曲·运镜", repo:"jtydhr88/screenwriting-skills", stat:"★ 1,967 · MIT", desc:"全片与短剧宏观剧作结构（菲尔德三幕、救猫咪15拍、麦基故事三角、陆军凤头猪肚豹尾），与单场戏 sw-scene-craft 互补。"},
+  {sid:"video-spec-builder", wave:"W1", dom:"电影剧作·戏曲·运镜", repo:"feicaiclub/video-spec-builder", stat:"★ 1,077 · MIT", desc:"苏格拉底式导演追问将视频想法收敛为精确到秒、对齐 TTS/字幕/3D/Shader 的 video-spec.md 分镜规格书。"},
+  {sid:"hallmark", wave:"W2", dom:"东方长图·古文笺·强风格化", repo:"Nutlope/hallmark", stat:"★ 51.9K · 187文件", desc:"随机派发独立艺术方向（社论大报/博物馆画册/暖调工坊等）+ 50条硬性底线 + sloplint.mjs 体检，消灭 AI 同质化。"},
+  {sid:"stylized-design-atlas", wave:"W2", dom:"东方长图·古文笺·强风格化", repo:"bergside/awesome-design-skills", stat:"★ 3,583 · 67流派合一", desc:"67 种强烈风格化设计系统合一图鉴（点阵抖动 dithered、粗野 brutalism、孔版 riso、赤陶 terracotta、纸本复古等）秒调 Token。"},
+  {sid:"japanese-webdesign", wave:"W3", dom:"东方长图·古文笺·强风格化", repo:"ronantakizawa/japanese-webdesign", stat:"东方Bento秩序", desc:"日式版式与高密度秩序美学：Bento 便当分格构图、纵向书卷韵律、微章印记与高信息量清爽层次。"},
+  {sid:"interface-design", wave:"W3", dom:"东方长图·古文笺·强风格化", repo:"dammyjay93/interface-design", stat:"★ 5,945 · 32.7K安装", desc:"专业创作工具与工作台界面工艺美学（专补导演台/驾驶舱/控制台）：微描边表面、高密度层级与状态工艺。"},
+  {sid:"steve-jobs-design-review", wave:"W3", dom:"东方长图·古文笺·强风格化", repo:"wondelai/skills", stat:"★ 2,655 · MIT", desc:"乔布斯极简主义减法审美终审官：无情砍除彩虹药丸墙、冗余装饰与次要按钮，给出二元放行裁决。"},
+  {sid:"top-design", wave:"W2", dom:"东方长图·古文笺·强风格化", repo:"wondelai/skills", stat:"★ 2,655 · MIT", desc:"浓缩 Locomotive、Studio Freight、AREA 17 五大获奖工作室 DNA：巨幅字体即画面、负空间武器化与滚动叙事构图。"},
+  {sid:"theme-factory", wave:"W2", dom:"东方长图·古文笺·强风格化", repo:"anthropics/skills (官方)", stat:"★ 191K · 100.6K安装", desc:"Anthropic 官方高定主题工坊：内置植物标本馆、极地晨雾、沙漠玫瑰等 10 套色彩+字体母题，一键给幻灯片/网页/报告换装。"},
+  {sid:"algorithmic-art", wave:"W1", dom:"东方长图·古文笺·强风格化", repo:"anthropics/skills (官方)", stat:"★ 191K · 93.9K安装", desc:"Anthropic 官方参数化生成艺术：基于 p5.js 确定性随机种子、流场、噪声雕塑与实时滑块面板创作计算艺术。"},
+  {sid:"threejs-textures", wave:"W2", dom:"3D材质·程序化·交互加载", repo:"cloudai-x/threejs-skills", stat:"16.0K安装 · r186", desc:"3D 艺术表面肌理、Canvas 程序化手绘贴图、HDR 环境反射、sRGB/Linear 防发灰色彩空间校准与离屏 RenderTarget。"},
+  {sid:"game-feel", wave:"W3", dom:"无缝转场·爽感动效·光学滤镜", repo:"awesome-gamedev-agent-skills", stat:"★ 8,044 · Apache-2.0", desc:"「视觉爽感与打击感（Juice）」艺术法则：顿帧冻结（Hit-Stop）、挤压与拉伸、屏幕震动衰减、残影与声画瞬态叠加。"},
+  {sid:"pixijs-filters", wave:"W3", dom:"无缝转场·爽感动效·光学滤镜", repo:"pixijs/pixijs-skills (官方)", stat:"MIT · 2D光学滤镜", desc:"2D WebGL/WGSL 艺术滤镜管线：水波热浪置换扭曲（Displacement）、胶片色彩矩阵调色、噪点颗粒与自定义 GLSL 片元滤镜。"},
+  {sid:"animejs", wave:"W3", dom:"无缝转场·爽感动效·光学滤镜", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · 零依赖", desc:"单 HTML 矢量动画利器：SVG 线条手绘生长描边、几何多边形有机形变（Morphing）与弹簧矩阵序列。"},
+  {sid:"locomotive-scroll", wave:"W3", dom:"无缝转场·爽感动效·光学滤镜", repo:"freshtechbro/claudedesignskills", stat:"★ 1,304 · MIT", desc:"美术馆画册级平滑惯性阻尼滚动、横向长卷展开、滚动速度倾斜（Speed Skew）与多层景深视差叙事。"},
+  {sid:"text-to-lottie", wave:"W3", dom:"无缝转场·爽感动效·光学滤镜", repo:"diffusionstudio/lottie", stat:"11.3K安装", desc:"纯代码生成可渲染矢量 Lottie/Bodymovin JSON 动画（动态徽标、视频艺术字幕条 Lower-Thirds、几何转场）。"},
+  {sid:"choreograph", wave:"W2", dom:"无缝转场·爽感动效·光学滤镜", repo:"emilkowalski/skills", stat:"★ 55.5K · MIT", desc:"多元素视觉群体编舞美学：编排谁先动、谁静止压阵、毫秒级错峰重叠（Stagger/Cascade）与退场平滑让位。"},
+  {sid:"archify", wave:"W3", dom:"活体视觉图解·空间白板·插画", repo:"tt-a1i/archify", stat:"★ 95.1K · 190.2K安装", desc:"现象级「一页式可交互视觉图解画布」：结论先行、暗亮双主题、粒子流动，支持导出高清 SVG/PNG/WebM 视频。"},
+  {sid:"live-panel", wave:"W3", dom:"活体视觉图解·空间白板·插画", repo:"ythx-101/live-panel-skill", stat:"★ 850 · 70文件", desc:"赛博指挥中心风「活体脉冲动态架构监控面板」：单份 JSON 驱动生成导线光包奔流、计数器翻转的循环网页或 MP4 视频。"},
+  {sid:"baoyu-diagram", wave:"W3", dom:"活体视觉图解·空间白板·插画", repo:"jimliu/baoyu-skills", stat:"★ 27.4K · 15.9K安装", desc:"宝玉双主题矢量图解生成器：内嵌 CSS 变量直出暗色/亮色双套矢量 SVG 与 @2x 超清 PNG，适配深色 PPT 与白底 PDF。"},
+  {sid:"stageshow", wave:"W2", dom:"活体视觉图解·空间白板·插画", repo:"benjitaylor/skills", stat:"★ 2,904 · 372文件", desc:"微缩舞台级产品插画与动态演示艺术：镜头取景裁切、透视蒙版与单因果光标叙事，做成 Stripe/Linear 级艺术插画。"},
+  {sid:"diagram-design", wave:"W1", dom:"活体视觉图解·空间白板·插画", repo:"cathrynlavery/diagram-design", stat:"★ 66.1K · MIT", desc:"出版级编辑部图表与版式排版：涵盖架构/象限/桑基/泳道/轴测分层等 40+ 图表的网格对齐、字号层级与留白规范。"},
+  {sid:"apple-design", wave:"W2", dom:"活体视觉图解·空间白板·插画", repo:"emilkowalski/skills", stat:"★ 55.5K · 284.6K安装", desc:"Apple WWDC 官方人机美学 Web 转译：半透明光学材质层、连续曲率超椭圆几何、光学字号与可打断物理惯性过渡。"},
+  {sid:"better-colors", wave:"W2", dom:"美学地基·设计心理学·微交互", repo:"jakubkrehel/skills", stat:"★ 11.9K · 38.3K安装", desc:"OKLCH 感知均匀色彩科学地基：根治传统 HSL 明度失真，精确计算 OKLCH 感知明度阶梯、P3/sRGB 色域裁剪与实测对比度。"},
+  {sid:"better-typography", wave:"W2", dom:"美学地基·设计心理学·微交互", repo:"jakubkrehel/skills", stat:"★ 11.9K · 40.3K安装", desc:"精密数字排印与 OpenType 光学地基：等宽数字 tabular-nums、字形变体、悬挂标点、平衡断行 text-wrap 及 Tailwind 映射。"},
+  {sid:"better-layout", wave:"W2", dom:"美学地基·设计心理学·微交互", repo:"jakubkrehel/skills", stat:"★ 11.9K · MIT", desc:"格式塔视觉分组、光学对齐与弹性空间结构地基：经受缩放、翻译词长膨胀与镜像测试零裁切零重叠。"},
+  {sid:"refactoring-ui", wave:"W2", dom:"美学地基·设计心理学·微交互", repo:"wondelai/skills", stat:"10.1K安装 · MIT", desc:"《Refactoring UI》视觉层级基石：灰阶先行建立主次、带冷暖色温的中性灰、双层物理光源阴影模型与无边框留白。"},
+  {sid:"web-typography", wave:"W2", dom:"美学地基·设计心理学·微交互", repo:"wondelai/skills", stat:"9.7K安装 · MIT", desc:"经典书籍级字体解剖、衬线/无衬线历史气质配对、模块化音阶字号比例尺（1.25/1.333/1.618）与长文阅读韵律。"},
+  {sid:"animation-vocabulary", wave:"W3", dom:"美学地基·设计心理学·微交互", repo:"emilkowalski/skills", stat:"273.1K安装 · MIT", desc:"动效美学精准命名反查词典：将感性的动态画面描述（果冻回弹、橡皮筋阻尼、洗牌展开）秒译为国际专业动效术语。"},
+  {sid:"animation-performance", wave:"W3", dom:"美学地基·设计心理学·微交互", repo:"emilkowalski/skills", stat:"71.2K安装 · MIT", desc:"60/120fps 丝滑渲染底层铁律：深入 Layout/Paint/Composite 管线，管控模糊开销与 GPU 合成层，锁死满帧。"},
+  {sid:"emil-design-eng", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"emilkowalski/skills", stat:"432.7K安装 · MIT", desc:"Emil Kowalski 网页组件触感工程：按压缩放反馈、弹簧阻尼曲线、圆角同心几何与排印光学微调。"},
+  {sid:"web-design-guidelines", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"vercel-labs/agent-skills (官方)", stat:"842.3K安装 · 官方", desc:"Vercel 官方网页界面审计标准：逐行检查可访问性、键盘焦点、触控热区、大字排版截断与暗色对比度。"},
+  {sid:"spec-driven-development", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"addyosmani/agent-skills", stat:"★ 114.6K · MIT", desc:"Addy Osmani 规格驱动逻辑法：编码前拆解能力矩阵、边界条件、状态不变量与二元可证伪验收规格。"},
+  {sid:"prompt-engineering-patterns", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"wshobson/agents", stat:"★ 42.4K · 24.3K安装", desc:"生产级大模型结构化提示词工程模式：系统契约、Few-Shot 优选、思维链分解、格式硬约束与防幻觉锚定。"},
+  {sid:"context-engineering", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"addyosmani/agent-skills", stat:"★ 114.6K · MIT", desc:"智能体上下文工程：优化规则文件结构、渐进式信息披露与跨阶段状态交接，根治长会话失焦。"},
+  {sid:"doc-coauthoring", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"anthropics/skills (官方)", stat:"★ 191K · 99.8K安装", desc:"Anthropic 官方重大合作提案、战略规划与白皮书三阶共创：背景补漏 → 逐节结构精修 → 陌生决策者盲测。"},
+  {sid:"pricing-strategy", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"coreyhaines31/marketingskills", stat:"★ 59.4K · 87.9K安装", desc:"商业变现与多档套餐定价策略：按并发席位/算力积分/存储阶梯设计价值指标、三档锚定套餐与 B2B 定制报价。"},
+  {sid:"competitor-profiling", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"coreyhaines31/marketingskills", stat:"★ 59.4K · 103.1K安装", desc:"市场竞品实证穿透建档：拆解对手定位、收费与边界，强制物理隔离「观测事实」与「主观推论」。"},
+  {sid:"cloudflare", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"cloudflare/skills (官方)", stat:"152.4K安装 · 官方", desc:"Cloudflare 官方网络架构、Cloudflare Tunnel 外网穿透、Zero Trust 访问控制与 52x/403/1xxx 故障归因。"},
+  {sid:"security-audit", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"cloudflare/security-audit-skill", stat:"★ 68.1K · MIT", desc:"Cloudflare 官方多阶段安全审计：针对 API 网关、防火墙与后台服务做基于真实信任边界的源码审查。"},
+  {sid:"hf-mem", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"huggingface/skills (官方)", stat:"★ 11.3K · 官方", desc:"零下载 GPU 显存精算器（uvx hf-mem）：HTTP Range 秒算 Safetensors/GGUF 权重 + KV Cache 能否塞进 H100/5090。"},
+  {sid:"vllm-deploy-docker", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"vllm-project/vllm-skills (官方)", stat:"Apache-2.0 · 官方", desc:"vLLM 官方 NVIDIA CUDA 推理容器部署：多卡张量并行（TP）、FP8 量化、显存水位与 OpenAI 网关排障。"},
+  {sid:"docker-compose-patterns", wave:"W1", dom:"网页·逻辑·提示词·策划·算力", repo:"docker/skills (官方)", stat:"Apache-2.0 · 官方", desc:"Docker 官方 Compose v2 生产编排规范：真实就绪 healthcheck、依赖启动序、持久化共享卷与网络隔离。"}
+];
+
+let curDom = "ALL";
+const grid = document.getElementById("grid");
+const qInput = document.getElementById("q");
+const dlg = document.getElementById("dlg");
+
+function render() {
+  const kw = qInput.value.trim().toLowerCase();
+  const list = ITEMS.filter(it => (curDom === "ALL" || it.dom === curDom) &&
+    (!kw || (it.sid + " " + it.wave + " " + it.dom + " " + it.repo + " " + it.desc).toLowerCase().includes(kw)));
+  grid.innerHTML = list.map((it, idx) => `
+    <article class="card" data-sid="${it.sid}">
+      <div class="card-top">
+        <span class="sid">$${it.sid}</span>
+        <span class="domain-badge">${it.dom}</span>
+      </div>
+      <p class="desc">${it.desc}</p>
+      <div class="meta">
+        <span>来源：${it.repo}</span>
+        <span>${it.stat} · ${it.wave}</span>
+      </div>
+    </article>
+  `).join("");
+}
+
+grid.addEventListener("click", e => {
+  const card = e.target.closest(".card");
+  if (!card) return;
+  const it = ITEMS.find(x => x.sid === card.dataset.sid);
+  if (!it) return;
+  document.getElementById("m-sid").textContent = "$" + it.sid;
+  document.getElementById("m-badge").textContent = `${it.dom} ｜ 批次：${it.wave}`;
+  document.getElementById("m-desc").textContent = it.desc;
+  document.getElementById("m-meta").textContent = `仓库：${it.repo}（${it.stat}）｜ 本机路径：~\\.codex\\skills\\${it.sid}`;
+  const cmd = `调用 $${it.sid} 技能，按专业规范执行当前任务`;
+  document.getElementById("m-cmd").textContent = cmd;
+  const copyBtn = document.getElementById("m-copy");
+  copyBtn.textContent = "一键复制调用指令";
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(cmd);
+    copyBtn.textContent = "✔ 已复制到剪贴板";
+  };
+  dlg.showModal();
+});
+
+document.getElementById("m-close").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+document.getElementById("chips").addEventListener("click", e => {
+  const btn = e.target.closest(".chip");
+  if (!btn) return;
+  document.querySelectorAll(".chip").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  curDom = btn.dataset.dom;
+  render();
+});
+qInput.addEventListener("input", render);
+render();
+</script>
+</body>
+</html>

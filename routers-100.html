@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金泰 777 项 Skills 六大总控确定性路由实时模拟台（20pt 大字版）</title>
+<style>
+  :root { --bg:#fafaf9; --card:#ffffff; --ink:#1c1917; --muted:#57534e; --accent:#0f766e; --accent-bg:#f0fdfa; --warn-bg:#fffbeb; --warn:#b45309; --border:#d6d3d1; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Microsoft YaHei","PingFang SC",sans-serif; font-size:20px; line-height:1.65; }
+  header { position:sticky; top:0; z-index:20; background:#ffffff; border-bottom:2px solid var(--border); padding:16px 24px; }
+  .header-inner { max-width:1320px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+  .top-row { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
+  h1 { margin:0; font-size:24px; font-weight:800; }
+  .stat-line { font-size:18px; color:var(--accent); font-weight:700; }
+  input[type="search"] { width:100%; font-size:21px; padding:12px 18px; border:2.5px solid var(--accent); border-radius:10px; outline:none; }
+  input[type="search"]:focus { box-shadow:0 0 0 4px rgba(15,118,110,0.16); }
+  .wrap { max-width:1320px; margin:18px auto 56px; padding:0 24px; }
+  details { margin-bottom:18px; }
+  summary { cursor:pointer; font-weight:700; color:var(--accent); user-select:none; }
+  .samples { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+  .pill { font-size:18px; padding:7px 14px; border:1.5px solid var(--border); border-radius:999px; background:#fff; cursor:pointer; }
+  .pill:hover { border-color:var(--accent); color:var(--accent); }
+  .result-box { background:#ffffff; border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin-bottom:26px; }
+  .res-grid { display:grid; grid-template-columns:1fr; gap:12px; margin-top:10px; }
+  .layer-row { padding:10px 14px; border-radius:8px; background:var(--accent-bg); }
+  .layer-excl { padding:10px 14px; border-radius:8px; background:var(--warn-bg); color:var(--warn); }
+  code { font-family:Consolas,monospace; background:#f5f5f4; padding:2px 8px; border-radius:5px; font-size:19px; font-weight:700; color:#0f766e; }
+  .hubs { display:grid; grid-template-columns:repeat(auto-fill, minmax(580px, 1fr)); gap:18px; }
+  .hub-card { background:var(--card); border:1.5px solid var(--border); border-radius:12px; padding:20px 22px; }
+  .hub-title { margin:0 0 8px; font-size:22px; font-weight:800; color:var(--accent); font-family:Consolas,"Microsoft YaHei",sans-serif; }
+  .hub-meta { font-size:18px; color:var(--muted); margin-top:10px; padding-top:10px; border-top:1px dashed var(--border); }
+</style>
+</head>
+<body>
+
+<div style="background:#0f172a;color:#f8fafc;padding:10px 22px;border-bottom:1px solid #334155;font-size:18px;">
+  <div style="max-width:1780px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;">
+    <div style="font-weight:800;color:#38bdf8;">🧭 金泰 AI 777 项 Skills 全景总典（20pt 大字检索台）</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <a href="https://aiuserai-ctrl.github.io/jintai-all-skills-atlas/" style="color:#fff;background:#b45309;text-decoration:none;padding:5px 13px;border-radius:8px;font-weight:700;">📚 全库 777 项优缺点总典</a>
+      <a href="https://aiuserai-ctrl.github.io/jintai-all-skills-atlas/curated-94.html" style="color:#fff;background:#0f766e;text-decoration:none;padding:5px 13px;border-radius:8px;font-weight:700;">⭐ GitHub六批94项精选口令台</a>
+      <a href="https://aiuserai-ctrl.github.io/jintai-all-skills-atlas/routers-100.html" style="color:#fff;background:#7c3aed;text-decoration:none;padding:5px 13px;border-radius:8px;font-weight:700;">⚡ 六大总控100路路由模拟台</a>
+      <a href="https://aiuserai-ctrl.github.io/jintai-skills-handbook/" style="color:#fff;background:#be123c;text-decoration:none;padding:5px 13px;border-radius:8px;font-weight:700;">🆕 近一月新装 318 项详表</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="top-row">
+      <h1>金泰 777 项 Skills 六大总控自动路由模拟台</h1>
+      <span class="stat-line">100/100 基准全绿 · 六大总控统管 135+ 专精流派 · 顶层预算 44.4% 零溢出</span>
+    </div>
+    <input id="q" type="search" placeholder="输入任意大白话任务测试自动分流（如：做个检索后台、把道德经做成古文夹注图、写一场契诃夫饭局戏、React缩略图变形转场…）" autofocus>
+  </div>
+</header>
+
+<div class="wrap">
+  <details>
+    <summary>点选典型交叉需求一键实测 ▾</summary>
+    <div class="samples" id="samples">
+      <button class="pill">设计一部五季美剧的叙事永动机引擎与提案圣经 Series Bible</button>
+      <button class="pill">写一段京剧西皮导板转原板再到流水板的公堂对质唱词</button>
+      <button class="pill">做一张复古相机镜头的等轴测爆炸拆解图与SVG引线标注</button>
+      <button class="pill">用React Three Fiber和Drei做一个高帧率3D产品展台组件</button>
+      <button class="pill">设计成片混音总线与人声对白自动压低BGM的Sidechain闪避参数</button>
+      <button class="pill">用高德拉特TOC瓶颈理论分析当前制片管线的唯一吞吐量卡点</button>
+      <button class="pill">做一个金泰算力调度后台和检索工作台</button>
+      <button class="pill">先出三个方向初稿让我选首页风格</button>
+      <button class="pill">把《早发白帝城》做成青朱赭三色文言文夹注长图</button>
+      <button class="pill">给A机8卡H100做导线光包流动的活体监控面板导出MP4</button>
+      <button class="pill">写一个父亲送女儿出嫁的小津风静观留白短片剧本</button>
+      <button class="pill">写一段明代昆曲南北合套折子戏剧本唱词</button>
+      <button class="pill">React路由切换让缩略图无缝放大成主图共享元素转场</button>
+      <button class="pill">用Three.js和PBR金属磨损包浆贴图做青铜器3D展示</button>
+      <button class="pill">女主嘴上笑着道谢说没事，其实委屈把眼泪憋回去6秒近景</button>
+      <button class="pill">古战场真人实拍重甲步兵手持陌刀死斗退三步</button>
+    </div>
+  </details>
+
+  <section class="result-box" id="resBox">
+    <div style="font-weight:800;font-size:22px;color:#0f766e;" id="r-hub">等待输入需求（或点击上方示例）实时查看确定性路由结果…</div>
+    <div class="res-grid" id="r-body" style="display:none;">
+      <div class="layer-row" id="r-l1"></div>
+      <div class="layer-row" id="r-l2" style="background:#f5f5f4;"></div>
+      <div id="r-why"></div>
+      <div class="layer-excl" id="r-ex"></div>
+    </div>
+  </section>
+
+  <div class="hubs">
+    <article class="hub-card">
+      <h2 class="hub-title">1. $jintai-design-aesthetic-router（视觉与界面美学总控）</h2>
+      <p style="margin:0;">统管 21 项设计技能：强制拆为 <b>L1 唯一方向主帅</b>（工作台 <code>interface-design</code> / 三稿比稿 <code>huashu-design</code> / 防同质化 <code>hallmark</code> / 巨幅排印 <code>top-design</code> / 日式 <code>japanese-webdesign</code> / 苹果 <code>apple-design</code> / 2027四质感 / 67流派图鉴）× <b>L2 物理字典</b>（OKLCH <code>better-colors</code> + <code>better-typography</code> + 20pt适老）× <b>L3 极简终审</b>（<code>steve-jobs-design-review</code>）。</p>
+      <div class="hub-meta">确定性基准自检：16 / 16 PASS（含 $explain-interface 渐进概念界面 + $better-ui 光学组件打磨）</div>
+    </article>
+    <article class="hub-card">
+      <h2 class="hub-title">2. $jintai-visual-diagram-router（图表·长卡·古文笺总控）</h2>
+      <p style="margin:0;">统管 9 项视觉图解技能，按最终介质 1 对 1 路由：五维切换工作台 <code>seecode</code> ｜ 一页交互讲解 <code>archify</code> ｜ 光包脉冲监控/MP4 <code>live-panel</code> ｜ 文档双主题矢量图 <code>baoyu-diagram</code> ｜ 现代文长卡/老宋全文 <code>ljg-card</code> ｜ 古诗文青朱赭夹注 <code>ljg-classic</code> ｜ Obsidian <code>json-canvas</code>。</p>
+      <div class="hub-meta">确定性基准自检：15 / 15 PASS（含 $teardown 爆炸拆解图 + 李继刚铸造六神器 $ljg-present/$ljg-business-model/$ljg-map/$ljg-structure/$ljg-rank/$ljg-constraint）</div>
+    </article>
+    <article class="hub-card">
+      <h2 class="hub-title">3. $jintai-motion-3d-router（动效·3D·滤镜·无缝转场总控）</h2>
+      <p style="margin:0;">统管 25 项动效与三维技能：原生共享元素变形 <code>react-view-transitions</code> ｜ 跨页帷幕过场 <code>barba-js</code> ｜ 惯性画册视差 <code>locomotive-scroll</code> ｜ SVG形变 <code>animejs</code> ｜ 2D光学滤镜叠色 <code>pixijs-*</code> ｜ PBR包浆 <code>substance-3d-texturing</code> ｜ 真3D <code>threejs-*</code> 十件套 + <code>camera-systems</code> ｜ 打击感 <code>game-feel</code>。</p>
+      <div class="hub-meta">确定性基准自检：21 / 21 PASS（含 Three.js 13件套全满贯 $threejs-react-three-fiber/$threejs-asset-pipeline/$threejs-performance + $spline-interactive + $rive-interactive + $react-spring-physics + $gestures + $physics-tuning + $audio-design）</div>
+    </article>
+    <article class="hub-card">
+      <h2 class="hub-title">4. $jintai-screenwriting-router（剧作·作者电影·戏曲·规格总控）</h2>
+      <p style="margin:0;">统管 8 项剧作与规格技能：竖屏爽剧大纲钩子 <code>drama-creator</code> ｜ 工业单集剧本+时长测算 <code>short-drama-write</code> ｜ 全片三幕/15拍 <code>sw-story-structure</code> ｜ 单场戏翻转 <code>sw-scene-craft</code> ｜ 小津画外留白 <code>ozu-screenplay-style</code> ｜ 契诃夫错半拍群像 <code>chekhov-dramaturgy</code> ｜ 传统戏曲宫调填词 <code>sw-chinese-opera-qupai</code> ｜ 秒级规格书 <code>video-spec-builder</code>。</p>
+      <div class="hub-meta">确定性基准自检：18 / 18 PASS（含剧集圣经 $sw-series-engine-bible + 多线结构 $sw-series-structure + 13大类型 $sw-genre-anatomy + 人物冲突 $sw-character-conflict + 编剧室 $sw-writers-room + 国产剧 $sw-chinese-series-practice + 京剧板腔 $sw-chinese-opera-banqiang + 继承之战 $succession-series-writing + 台词医院 $sw-dialogue + 22步解剖 $sw-truby-anatomy）</div>
+    </article>
+    <article class="hub-card">
+      <h2 class="hub-title">5. $douyin-acting-skill-system（文戏·微表情·对白话轮总控）</h2>
+      <p style="margin:0;">统管 7 项表演技能：Gate 0 远景背影自动拦截面部 AU → 口是心非 0.5s 泄露 <code>cinematic-facial-leakage-control</code> ｜ 双人 0.1s 抢话结巴 <code>ai-actor-performance</code> ｜ 多镜解剖锁死 <code>ai-micro-expression-director</code> ｜ 零台词六段反应 <code>character-emotion-performance</code> ｜ 甲方改戏 <code>flova-vague-feedback-director</code>。</p>
+      <div class="hub-meta">确定性基准自检：10 / 10 PASS</div>
+    </article>
+    <article class="hub-card">
+      <h2 class="hub-title">6. $douyin-combat-skill-system（武打·仙侠·战场·特效总控）</h2>
+      <p style="margin:0;">统管 30 项动作与特效技能：Gate 0 区分 3D国漫（角度+定格）与真人写实（受力+退步+扬土）→ 神话法宝 / 历史战场四问 / 武侠轻功 / 近身CQC / 万剑天穹阵 / 长枪六幕 / 功夫回响8宗师 / 120条特效百科 1 对 1 路由。</p>
+      <div class="hub-meta">确定性基准自检：20 / 20 PASS</div>
+    </article>
+  </div>
+</div>
+
+<script>
+const RULES = [
+  {hub:"$douyin-combat-skill-system", kw:["古战场","陌刀","重甲","退三步","三国","黄土"], l1:"$four-questions-combat-exchange-prompts", l2:"$stylized-vs-photoreal-combat-prompts（真人写实轨）", why:"历史战场冷兵器死斗：强制执行“谁发力→打在哪→退几步→站住没”四问因果链。", ex:"严禁混入仙侠法相光波词破坏写实物理受力。"},
+  {hub:"$douyin-combat-skill-system", kw:["打戏","武打","仙侠","万剑归宗","孙悟空","武侠","cqc","近身格斗","功夫回响","120条特效"], l1:"$seedance-combat-trinity-pipeline / 对应题材专精主帅", l2:"$cinema-combat-rhythm-optimizer", why:"命中武打动作与特效领域：先过 Gate 0 画风反相门禁，再由 route_combat_skill.py 锁定唯一题材主帅。", ex:"严禁同时拼贴两套打戏时间轴模板。"},
+  {hub:"$douyin-acting-skill-system", kw:["抢话","声音重叠","口吃","结巴","吵架对白"], l1:"$ai-actor-performance", l2:"Gate 0 近景放行", why:"双人交锋重在提前 0.1s 抢话、0.2s 声音重叠与哽咽失流利，消除排队朗读感。", ex:"排除 $cinematic-facial-leakage-control（单人伪装台词专用）。"},
+  {hub:"$douyin-acting-skill-system", kw:["微表情","口是心非","笑着道谢","憋回去","假笑","强忍眼泪","语言缝隙"], l1:"$cinematic-facial-leakage-control", l2:"FACS 错峰保护（台词说完后 0.3–0.6s 泄露）", why:"单人嘴上体面 X ≠ 内心翻涌 Y：锁 ≤3 基础 AU，把唯一 1 个真实泄露 AU 放在台词结束后防碎嘴。", ex:"排除 $ai-actor-performance（无双人抢话）。"},
+  {hub:"$jintai-visual-diagram-router", kw:["文言文夹注","青朱赭","古文笺","ljg-classic","道德经","早发白帝城","古诗"], l1:"$ljg-classic", l2:"$web-typography（暖纸深墨典籍字阶）", why:"古诗文典籍专用：原文 100% 覆盖之青色字词注、朱色句义注、赭色异文与无字意旨配图长 PNG。", ex:"排除 $ljg-card（现代文长卡无青朱赭逐词夹注协议）。"},
+  {hub:"$jintai-visual-diagram-router", kw:["铸卡片","ljg-card","阅读长图","京华老宋","原文长图"], l1:"$ljg-card", l2:"$better-typography", why:"出版级现代文竖版长图：支持 -l 静线叙事、-f 京华老宋 40px 纯白底全文精排等四套模具。", ex:"排除 $baoyu-diagram（彼为框线逻辑图而非文章排版长卡）。"},
+  {hub:"$jintai-visual-diagram-router", kw:["活体监控","光包流动","live-panel","导线脉冲","导出mp4"], l1:"$live-panel", l2:"$better-colors", why:"赛博指挥中心风动态监控：单份 JSON 驱动导线光包奔流与状态翻转，支持直出循环 MP4。", ex:"排除 $archify（偏静态原理讲解单页）。"},
+  {hub:"$jintai-visual-diagram-router", kw:["seecode","泳道","时序","五维"], l1:"$seecode", l2:"$diagram-design", why:"支持拓扑/泳道/时序/架构栈/20pt简报五种视图实时切换的动态工程工作台。", ex:"排除静态单视图 SVG。"},
+  {hub:"$jintai-visual-diagram-router", kw:["archify","一页式视觉图解","粒子动效"], l1:"$archify", l2:"$diagram-design + $better-colors", why:"结论先行、暗亮双主题可交互讲解画布，支持导出 SVG/PNG/WebM。", ex:"排除 $live-panel。"},
+  {hub:"$jintai-visual-diagram-router", kw:[".canvas","obsidian白板","json-canvas"], l1:"$json-canvas", l2:"JSON Canvas Spec 1.0", why:"生成 Obsidian 原生可自由拖拽的独立 .canvas 节点连线白板（零触碰 .obsidian 配置）。", ex:"排除 HTML 图表工具。"},
+  {hub:"$jintai-visual-diagram-router", kw:["架构图","流程图","桑基图","象限图","svg"], l1:"$baoyu-diagram", l2:"$diagram-design（40+图表网格留白规范）", why:"嵌入报告/PDF/PPT 的出版级静态双主题矢量 SVG + @2x 高清 PNG。", ex:"排除冗余动态监控大屏。"},
+  {hub:"$jintai-screenwriting-router", kw:["昆曲","曲牌体","折子戏","南北合套","元杂剧","十七宫调","戏曲"], l1:"$sw-chinese-opera-qupai", l2:"《中国历史文化图库》形制联动 + $sw-scene-craft", why:"传统戏曲曲牌体声腔格律、十七宫调情绪映射、衬字务头与宾白转唱点规范。", ex:"排除现代短剧白话剧本模板。"},
+  {hub:"$jintai-screenwriting-router", kw:["小津","静观","枕镜头","出嫁","事件画外"], l1:"$ozu-screenplay-style", l2:"$sw-scene-craft", why:"小津安二郎静观留白美学：大事件移出画外、最小音节承认、中转传话与无人空镜递减收尾。", ex:"严禁混入 $drama-creator 强冲突打脸爽剧套路。"},
+  {hub:"$jintai-screenwriting-router", kw:["契诃夫","饭局","错半拍","生活流群像","暗流"], l1:"$chekhov-dramaturgy", l2:"$sw-scene-craft", why:"契诃夫群像暗流法：无反派环境张力、错半拍对白、最深痛处用最短词与三层复调结尾。", ex:"排除直白说教台词。"},
+  {hub:"$jintai-screenwriting-router", kw:["video-spec","分镜规格书","宣传片分镜"], l1:"$video-spec-builder", l2:"$sw-story-structure", why:"苏格拉底式收敛精确到秒、对齐 TTS/字幕/3D/Shader 的 video-spec.md 工程规格书。", ex:"排除演员对白剧本格式。"},
+  {hub:"$jintai-screenwriting-router", kw:["短剧大纲","前3秒钩子","付费卡点","爽剧","剧本","单场戏","三幕"], l1:"$short-drama-write / $drama-creator / $sw-story-structure", l2:"$sw-scene-craft + $tramstop-skill", why:"按创作阶段精准接力：策划大纲钩子走 drama-creator，全片骨架走 sw-story-structure，标准单集正文与秒数测算走 short-drama-write。", ex:"绝不同时混用两套剧本格式。"},
+  {hub:"$jintai-motion-3d-router", kw:["共享元素转场","view transition","缩略图无缝放大"], l1:"$react-view-transitions", l2:"$animation-performance（60fps合成层）", why:"浏览器原生 View Transitions API 实现跨路由缩略图无缝变形展开为主图。", ex:"React 单页优先走原生 VT，传统多 HTML 页才走 $barba-js。"},
+  {hub:"$jintai-motion-3d-router", kw:["barba","多页面无缝转场","帷幕过场"], l1:"$barba-js", l2:"$gsap-timeline + $animation-performance", why:"劫持多 HTML 导航并结合 GSAP 时间轴做跨页帷幕擦除与预取零白屏。", ex:"排除单页组件过渡。"},
+  {hub:"$jintai-motion-3d-router", kw:["three.js","threejs","pbr","磨损包浆","substance","webgl","3d"], l1:"$threejs-fundamentals + $substance-3d-texturing", l2:"$threejs-materials + $threejs-lighting + $camera-systems + $threejs-loaders", why:"真 3D 场景与写实风化包浆贴图全栈管线（Three.js 十件套按需挂载 + ACESFilmic 防发灰）。", ex:"排除仅做 2D 卡片倾斜的轻量伪 3D。"},
+  {hub:"$jintai-motion-3d-router", kw:["pixi","水波","混合模式","anime.js","svg描边","locomotive","惯性","打击感","顿帧"], l1:"对应引擎唯一专精包（$pixijs-filters / $animejs / $locomotive-scroll / $game-feel）", l2:"$animation-performance", why:"按渲染介质（2D WebGL / 单页 SVG / 惯性视差 / Hit-Stop 爽感）1 对 1 锁定唯一引擎。", ex:"禁止在同一画布混装两套冲突动画运行时。"},
+  {hub:"$jintai-design-aesthetic-router", kw:["三个方向","三个初稿","选风格","比稿"], l1:"$huashu-design", l2:"$better-colors + $better-typography ｜ L3: $steve-jobs-design-review", why:"用户明确要求先看多套差异化方向再拍板，触发三方向提案契约。", ex:"排除直接写死单一方案的控制台模式。"},
+  {hub:"$jintai-design-aesthetic-router", kw:["后台","工作台","控制台","管理系统","仪表盘","导演台","检索"], l1:"$interface-design", l2:"$better-colors(OKLCH) + $better-typography + 20pt适老 + $design-everyday-things ｜ L3: $steve-jobs-design-review", why:"高频生产力工具面板：采用微描边高密度层级工艺 + 顶部聚焦极简搜索，严禁花哨大留白海报风。", ex:"排除 $huashu-design（免去3稿打断节奏）与 $top-design（低密度巨字海报）。"},
+  {hub:"$jintai-design-aesthetic-router", kw:["宋式","孔版","risograph","盲压浮雕","xerox","50种视觉","日式","bento","苹果风","毛玻璃","粗野主义","awwwards","落地页","网页"], l1:"对应唯一艺术主帅（$hallmark / $top-design / $japanese-webdesign / $apple-design / 2027四质感 / $stylized-design-atlas）", l2:"$better-colors + $better-typography + $better-layout ｜ L3: $steve-jobs-design-review + $web-design-guidelines", why:"L1 只选唯一 1 个风格方向主帅掌舵，L2 提供客观色彩字阶参数，L3 收尾砍除冗余元素。", ex:"严禁两个 L1 风格主帅同时抢夺版面主导权。"}
+];
+
+const qInput = document.getElementById("q");
+function evaluate(text) {
+  const t = text.trim().toLowerCase();
+  const body = document.getElementById("r-body");
+  const hubEl = document.getElementById("r-hub");
+  if (!t) {
+    hubEl.textContent = "等待输入需求（或点击上方示例）实时查看确定性路由结果…";
+    body.style.display = "none";
+    return;
+  }
+  let best = RULES[RULES.length - 1];
+  let bestHits = 0;
+  for (const r of RULES) {
+    const hits = r.kw.filter(k => t.includes(k.toLowerCase())).length;
+    if (hits > bestHits) { bestHits = hits; best = r; }
+  }
+  hubEl.textContent = `🧭 自动命中总控中枢：${best.hub}`;
+  document.getElementById("r-l1").innerHTML = `<b>🥇 L1 唯一方向主帅（只读这 1 个主流程）：</b> <code>${best.l1}</code>`;
+  document.getElementById("r-l2").innerHTML = `<b>🧱 L2 正交物理地基 / L3 收尾终审：</b> ${best.l2}`;
+  document.getElementById("r-why").innerHTML = `<b>💡 确定性选型依据：</b> ${best.why}`;
+  document.getElementById("r-ex").innerHTML = `<b>🚫 自动拦截易混冲突项：</b> ${best.ex}`;
+  body.style.display = "grid";
+}
+
+qInput.addEventListener("input", () => evaluate(qInput.value));
+document.getElementById("samples").addEventListener("click", e => {
+  const btn = e.target.closest(".pill");
+  if (!btn) return;
+  qInput.value = btn.textContent;
+  evaluate(qInput.value);
+});
+</script>
+</body>
+</html>
